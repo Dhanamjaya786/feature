@@ -1,0 +1,28 @@
+server:
+  port: 8042
+  servlet:
+    context-path: /hello
+spring:
+  devtools:
+    restart:
+      enabled: true
+  profiles:
+    include: dev,qa,prod
+---
+manager:
+  devid: 101
+  devname: dev
+spring:
+  profiles: dev
+---
+manager:
+  prodid: 103
+  prodname: prod
+spring:
+  profiles: prod
+---
+manager:
+  qaid: 102
+  qaname: qa
+spring:
+  profiles: qa
