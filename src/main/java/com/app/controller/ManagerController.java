@@ -4,9 +4,10 @@
 package com.app.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 
 import com.app.model.Manager;
 
@@ -14,7 +15,7 @@ import com.app.model.Manager;
  * @author Dhanamjaya
  *
  */
-@Controller
+@RestController
 public class ManagerController {
 
 	@Autowired
@@ -26,4 +27,14 @@ public class ManagerController {
 	{
 		return manager.toString();
 	}
+	@PostMapping("/two")
+	public String getRespo()
+	{
+		return "hello Post method";
+		
+	}
+	
+	
+	
+	
 }
